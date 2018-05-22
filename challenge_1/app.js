@@ -5,14 +5,18 @@ var winner = {'X':'A',
 var currentBoard = [];
 var arr = document.getElementsByClassName("squre");
 var restBtn = document.getElementById("btn");
+
 restBtn.addEventListener("click", emptyB);
-//make empty board
-console.log(arr)
+
 function emptyB() {
   for(var i = 0; i < arr.length;i++) {
    arr[i].innerHTML = 0;
   }  
+  //var fullNode = document.getElementById("full");
+  //fullNode.parentNode.removeChild(fullNode);
+  
 }
+
 function checkIfFull() {
   var count = 0;
   for(var i = 0; i < arr.length;i++) {
@@ -21,7 +25,12 @@ function checkIfFull() {
     }
    } 
    if(count === arr.length) {
-     alert('full!');
+     //alert('full!');
+    // var node = document.createElement("P");
+     //var text = document.createTextNode("FULL");
+     //node.appendChild(text);
+     //document.getElementById("full").appendChild(node);
+    
      emptyB();
    }
 }
