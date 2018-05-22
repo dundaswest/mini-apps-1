@@ -1,0 +1,10 @@
+{
+  "name": "mini-app2",
+  "description": "CSV Report Generator",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.3",
+    "nodemon":"1.17.4"
+  }
+}
