@@ -11,7 +11,19 @@ console.log(arr)
 function emptyB() {
   for(var i = 0; i < arr.length;i++) {
    arr[i].innerHTML = 0;
-}  
+  }  
+}
+function checkIfFull() {
+  var count = 0;
+  for(var i = 0; i < arr.length;i++) {
+    if(arr[i].innerHTML !== '0') {
+      count++;
+    }
+   } 
+   if(count === arr.length) {
+     alert('full!');
+     emptyB();
+   }
 }
 function myBoard() {
   var board = [];
@@ -39,6 +51,7 @@ function clickEvent(){
   horizontally();
   vertically()
   diagonally();
+  checkIfFull();
   console.log(currentBoard)
 }
 
