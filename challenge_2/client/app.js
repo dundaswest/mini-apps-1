@@ -7,13 +7,13 @@ function bye(obj) {
   
   function hi(obj) {
     var temp = [];
-
-    for(var key in obj) {
-      if(key !== "children"){
-      temp.push(obj[key]);
+    var targetArr = Object.keys(obj);
+    for(var i = 0; i < targetArr.length;i++) {
+      if(targetArr[i] !== "children") {
+        temp.push(obj[targetArr[i]]);
       }
     }
-  
+ 
   id++;
   result.push(`${temp.join(',')} ${id}`);
 
