@@ -2,6 +2,7 @@
 //var modify = require('./modifyData');
 function bye(obj) {
   var result = [];
+  var id = 0;
   result.push(Object.keys(obj).filter((e => e !== 'children')).join(', '));
   
   function hi(obj) {
@@ -12,7 +13,9 @@ function bye(obj) {
       temp.push(obj[key]);
       }
     }
-  result.push(temp.join(','));
+  
+  id++;
+  result.push(`${temp.join(',')} ${id}`);
 
       if(obj.children.length) {
 
