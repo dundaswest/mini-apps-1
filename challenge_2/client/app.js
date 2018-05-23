@@ -42,13 +42,13 @@ var handleSubmitBtn = $("button").on('click',function(e){
     contentType: "application/json",
     success: function(data) {
         console.log('success');
-        //callback?
-        //append parsed data to results p
         console.log('here is data', data);
         data = JSON.parse(data);
-        console.log('result ' + bye(data));
         bye(data);
-        //$(results).append(bye(data));
+        var div = '<div>'
+        div.text =  bye(data);
+        $("#results").append(bye(data));
+        console.log('result ' + bye(data));
     },
     err: function(err){
       console.log(err);
