@@ -1,6 +1,9 @@
 class Second extends React.Component {
   constructor(props){
     super(props);
+    this.state= {
+      number: 3
+    }
   }
   render() {
     return (
@@ -31,8 +34,8 @@ class Second extends React.Component {
         <input id="phoneNumber" name="phoneNumber" type="text"/>
       </div>
       </form>
-
-     <button>NEXT</button>
+      <button id = "submit">submit</button>
+     <button onClick = {()=>this.props.handleCheckOutBtn(this.state.number)}>NEXT</button>
 
       </div>
     )
@@ -40,3 +43,5 @@ class Second extends React.Component {
    
 
 }
+
+window.second =  Second;
