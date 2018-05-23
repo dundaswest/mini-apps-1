@@ -13,11 +13,11 @@ res.send(req.body)
 });
 
 app.post('/', function (req, res) {
-  ////console.log('--------------' + JSON.stringify(res));
+console.log('--------------' + req);
  // res.send('POST')
- console.log(req.body)
-  res.send(req.body);
+ console.log(req.body.inputVal)
+  res.send(req.body.inputVal);
 });
-app.listen(3000,()=> console.log('hello'));
+app.listen(3000,()=> console.log('hsello'));
 
 
