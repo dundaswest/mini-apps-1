@@ -1,0 +1,1 @@
+{"version":3,"sources":["../client/index.js"],"names":["ReactDOM","render","document","getElementById"],"mappings":";;AAAAA,SAASC,MAAT,CAAgB,oBAAC,GAAD,OAAhB,EAAwBC,SAASC,cAAT,CAAwB,KAAxB,CAAxB","file":"index.js","sourcesContent":["ReactDOM.render(<App />,document.getElementById('app'));\n"]}

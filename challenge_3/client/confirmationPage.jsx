@@ -11,7 +11,9 @@ class Confirmation extends React.Component {
       <div>
       <div>Confirmation</div>
       <div id ="confirm"></div>
-      <button  onClick = {()=>this.props.handleCheckOutBtn(this.state.number)}>Purchase</button>
+      <div>{this.props.finalInfo}</div>
+      <button  onClick = {()=>this.props.handleCheckOutBtn(this.state.number)}>GoBack</button>
+      <button onClick = {()=> this.props.confirm(this.props.finalInfo)}>CHECKOUT</button>
       </div>
     );
   }

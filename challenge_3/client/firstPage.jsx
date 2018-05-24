@@ -3,34 +3,22 @@ class First extends React.Component {
     super(props);
     this.state= {
       number: 2,
-      username:'',
+      name:'',
       email:'',
-      password:''
+      password:'',
     }
   }
   handleUserChange(e){
-    this.setState({username:e.target.value})
-    console.log(e.target.value)
+    var value = e.target.value;
+    this.setState({name:value});
   }
   handleEmailChange(e){
-    this.setState({email:e.target.value})
-    console.log(e.target.value)
+    var value = e.target.value;
+    this.setState({email:value});
   }
   handlePasswordChange(e){
-    this.setState({password:e.target.value})
-    console.log(e.target.value)
-  }
-  submit() {
-    //TODO axios 
-    $.ajax({
-      method: "POST",
-      url: "http://localhost:3000",
-      contentType: "application/json",
-      data: JSON.stringify({userInput:[this.state.username,this.state.email,this.state.password]})
-      })
-      .done(function( data ) {
-        alert( "Data Saved: " + JSON.stringify(data));
-      });
+    var value = e.target.value;
+    this.setState({password:value});
   }
   
   render(){
@@ -50,7 +38,7 @@ class First extends React.Component {
       <input id="password" name="password" type="text" onChange={this.handlePasswordChange.bind(this)}/>
       </div>
       </form>
-    <button id = "submit" onClick = {()=> this.submit()}>submit</button>
+    <button id = "submit" onClick = {()=> this.props.handleSubmitBtn([this.state.name,this.state.email,this.state.password].join(','))}>submit</button>
      <button id="toSecond" onClick = {()=>this.props.handleCheckOutBtn(this.state.number)}>NEXT</button>
 
       </div>
