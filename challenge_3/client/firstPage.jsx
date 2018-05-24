@@ -21,7 +21,7 @@ class First extends React.Component {
     console.log(e.target.value)
   }
   submit() {
-    //axios 
+    //TODO axios 
     $.ajax({
       method: "POST",
       url: "http://localhost:3000",
