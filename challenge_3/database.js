@@ -38,4 +38,4 @@ myUser.save(function (err, myUser) {
   if (err) return console.error(err);
 });*/
 //insert 
-module.exports = db;
+module.exports = User;

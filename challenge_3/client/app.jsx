@@ -15,6 +15,7 @@ class App extends React.Component {
   }
 
   confirm(info) {
+    console.log(info);
     //TODO axios 
     $.ajax({
       method: "POST",
