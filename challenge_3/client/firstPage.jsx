@@ -5,8 +5,7 @@ class First extends React.Component {
       number: 2,
       username:'',
       email:'',
-      password:'',
-      //inputData:{username:this.username,email:this.email,password:this.password}
+      password:''
     }
   }
   handleUserChange(e){
@@ -22,6 +21,7 @@ class First extends React.Component {
     console.log(e.target.value)
   }
   submit() {
+    //axios 
     $.ajax({
       method: "POST",
       url: "http://localhost:3000",
